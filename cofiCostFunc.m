@@ -41,7 +41,6 @@ Theta_grad = zeros(size(Theta));
 %
 D = (X * Theta' - Y) .* R;
 
-% Normally sum(X(:)), but that looks weird here.
 J = 1/2 * sum(sum(D .^ 2)) + lambda / 2 * sum(sum(Theta .^ 2)) ...
                            + lambda / 2 * sum(sum(X .^ 2));
 
